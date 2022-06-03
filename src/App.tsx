@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import './App.scss';
 
 const App: FC = (): ReactElement => {
   return (

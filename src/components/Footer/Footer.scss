@@ -1,0 +1,12 @@
+footer {
+  flex-grow: 0 !important;
+  padding: 12px 0 12px 0;
+  text-align: center;
+  color: #F8F8F8;
+  background-color: #333333;
+  box-shadow: 0 0.2em 0.8em black;
+  z-index: 100;
+  small {
+    font-style: italic;
+  }
+}
