@@ -11,7 +11,7 @@ const Footer: FC<FooterProps> = ({
   copyright
 }) : ReactElement => {
   return (
-    <footer>
+    <footer className='app'>
       {children}
       <small>
         &copy; {copyright} {new Date().getFullYear()}

@@ -11,7 +11,7 @@ const Header: FC<HeaderProps> = ({
   title = 'Header'
 }) : ReactElement => {
   return (
-    <header>
+    <header className='app'>
       <h1>{title}</h1>
       {children}
     </header>
