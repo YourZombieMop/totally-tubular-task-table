@@ -1,6 +1,8 @@
 import React, { FC, ReactElement } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import TaskList from './components/TaskList/TaskList';
+
 import './App.scss';
 
 const App: FC = (): ReactElement => {
@@ -8,7 +10,7 @@ const App: FC = (): ReactElement => {
     <>
       <Header title='Totally Tubular Task Table' />
       <main className='App'>
-        <h2>Application - {process.env.NODE_ENV}</h2>
+        <TaskList tasks={[]} />
       </main>
       <Footer copyright='Matthew Boyea'/>
     </>
