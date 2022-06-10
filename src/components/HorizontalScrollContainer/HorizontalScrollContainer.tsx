@@ -15,3 +15,5 @@ const HorizontalScrollContainer: FC<HorizontalScrollContainerProps> = ({
     </div>
   );
 }
+
+export default HorizontalScrollContainer;

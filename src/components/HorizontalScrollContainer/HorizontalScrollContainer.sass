@@ -1,1 +1,11 @@
+$v-padding: 1.2em
+$h-padding: 0em
 .horizontal-scroll-container
+  overflow: hidden
+  white-space: nowrap
+  height: calc(100% - 2 * $v-padding)
+  width: calc(100% - 2 * $h-padding)
+  padding: $v-padding $h-padding
+  > *
+    display: inline-block
+    height: 100%
