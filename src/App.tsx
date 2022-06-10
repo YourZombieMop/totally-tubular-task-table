@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import TaskList from './components/TaskList/TaskList';
 
-import './App.scss';
+import './App.sass';
 
 import taskData from './data/tasks.json';
 

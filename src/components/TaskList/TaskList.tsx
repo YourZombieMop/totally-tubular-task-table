@@ -1,7 +1,7 @@
 import React, {FC, ReactElement} from 'react';
 import {Task} from '../../types/Task';
 
-import './TaskList.scss';
+import './TaskList.sass';
 
 interface TaskListProps {
   tasks: Task[]

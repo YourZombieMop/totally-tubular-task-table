@@ -1,5 +1,5 @@
 import React, {FC, ReactElement} from 'react';
-import './Header.scss';
+import './Header.sass';
 
 interface HeaderProps {
   children?: React.ReactNode;

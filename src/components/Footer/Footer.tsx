@@ -1,5 +1,5 @@
 import React, {FC, ReactElement} from 'react';
-import './Footer.scss';
+import './Footer.sass';
 
 interface FooterProps {
   children?: React.ReactNode;
