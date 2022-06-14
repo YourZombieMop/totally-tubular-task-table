@@ -4,7 +4,6 @@ import './HorizontalScrollContainer.sass'
 
 interface HorizontalScrollContainerProps {
   children?: React.ReactNode;
-  scrollStep: Number;
 }
 
 const HorizontalScrollContainer: FC<HorizontalScrollContainerProps> = ({
