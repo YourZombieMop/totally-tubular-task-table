@@ -1,12 +1,13 @@
-$v-padding: 1.2em
-$h-padding: 0em
+$v-padding: 1.6em
+$h-padding: 0.6em
 .horizontal-scroll-container
   white-space: nowrap
   overflow: hidden
-  overflow-x: auto
+  overflow-x: scroll
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: -ms-autohiding-scrollbar
-  overscroll-behavior: contain // TODO: fix scroll behavior
+  overscroll-behavior: contain
+  color-scheme: dark
   height: calc(100% - 2 * $v-padding)
   width: calc(100% - 2 * $h-padding)
   padding: $v-padding $h-padding
@@ -14,6 +15,3 @@ $h-padding: 0em
     display: inline-block
     height: 100%
     overscroll-behavior: contain
-
-.horizontal-scroll-container::-webkit-scrollbar
-  display: none

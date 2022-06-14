@@ -1,4 +1,4 @@
-import React, {FC, ReactElement, useRef} from 'react';
+import React, {FC, ReactElement, useRef, useState} from 'react';
 
 import './HorizontalScrollContainer.sass'
 
@@ -11,14 +11,19 @@ const HorizontalScrollContainer: FC<HorizontalScrollContainerProps> = ({
   children,
 }): ReactElement => {
   const containerRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+
   const onScroll: React.WheelEventHandler<HTMLDivElement> = (e) => {
-    if (e.deltaX == 0 && e.deltaY != 0) {
-      console.log(e);
-      containerRef.current.scroll({
-        top: 0,
-        left: containerRef.current.scrollLeft + e.deltaY,
-        behavior: 'smooth'
-      });
+    const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
+    if (hoveredElement == containerRef.current) {
+      // if user is scrolling vertically & not horizontally
+      if (e.deltaY != 0 && e.deltaX == 0) {
+        // scroll horizontally
+        containerRef.current.scroll({
+          top: 0,
+          left: containerRef.current.scrollLeft + e.deltaY,
+          behavior: 'auto'
+        });
+      }
     }
   }
   return (
