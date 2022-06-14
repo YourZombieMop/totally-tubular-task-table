@@ -5,7 +5,6 @@ import './HorizontalScrollContainer.sass'
 interface HorizontalScrollContainerProps {
   children?: React.ReactNode;
 }
-
 const HorizontalScrollContainer: FC<HorizontalScrollContainerProps> = ({
   children,
 }): ReactElement => {
@@ -14,8 +13,9 @@ const HorizontalScrollContainer: FC<HorizontalScrollContainerProps> = ({
   const onScroll: React.WheelEventHandler<HTMLDivElement> = (e) => {
     const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
     if (hoveredElement == containerRef.current) {
+      console.log(e);
       // if user is scrolling vertically & not horizontally
-      if (e.deltaY != 0 && e.deltaX == 0) {
+      if (e.deltaY != 0 && !(e.shiftKey || e.deltaX != 0)) {
         // scroll horizontally
         containerRef.current.scroll({
           top: 0,
