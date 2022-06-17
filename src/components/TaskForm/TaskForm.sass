@@ -1,0 +1,24 @@
+$v-margin: 0rem
+$h-margin: 0.8rem
+$title-font-size: 1.8rem
+$title-v-padding: 1.6em // TODO: implement padding
+$title-h-padding: 0.6em
+$main-v-padding: 1.6em
+$main-h-padding: 0.6em
+
+.task-form // TODO: rounded corners, padding, colors --other-styling-etc--
+  position: relative
+  height: 100%
+  width: 400px // TODO: determine width with media queries
+  margin: $v-margin $h-margin
+  color: #E8E8E8
+  background-color: #505050
+  header
+    height: $title-font-size
+    h2
+      font-size: $title-font-size
+  main
+    height: calc(100% - $title-font-size)
+
+  
+  // TODO: make TaskListElements overflow to the next line

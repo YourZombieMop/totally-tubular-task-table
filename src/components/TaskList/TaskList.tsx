@@ -4,11 +4,11 @@ import {Task} from '../../types/Task';
 import './TaskList.sass';
 
 interface TaskListProps {
-  tasks: Task[]
+  tasks: Task[];
 }
 
 const TaskList: FC<TaskListProps> = ({
-  tasks
+  tasks = [],
 }): ReactElement => {
   return (
     <ul className='task-list'>
