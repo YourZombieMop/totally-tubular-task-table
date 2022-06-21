@@ -1,24 +1,26 @@
 $v-margin: 0rem
 $h-margin: 0.8rem
+$v-padding: 1.4rem
+$h-padding: 1rem
 $title-font-size: 1.8rem
-$title-v-padding: 1.6em // TODO: implement padding
-$title-h-padding: 0.6em
-$main-v-padding: 1.6em
-$main-h-padding: 0.6em
+$title-bot-padding: 0.8em
 
-.task-form // TODO: rounded corners, padding, colors --other-styling-etc--
+.task-form // TODO: rounded corners, colors --other-styling-etc--
   position: relative
-  height: 100%
-  width: 400px // TODO: determine width with media queries
+  height: calc(100% - 2 * $v-padding)
+  width: 360px // TODO: determine width with media queries
   margin: $v-margin $h-margin
-  color: #E8E8E8
-  background-color: #505050
+  border-radius: 1.2em
+  padding: $v-padding $h-padding
+  color: #EAEAEA
+  background-color: #333333
   header
-    height: $title-font-size
+    height: calc($title-font-size)
+    padding: 0 0 $title-bot-padding 0
     h2
       font-size: $title-font-size
   main
-    height: calc(100% - $title-font-size)
+    height: calc(100% - $title-font-size - $title-bot-padding)
 
   
   // TODO: make TaskListElements overflow to the next line

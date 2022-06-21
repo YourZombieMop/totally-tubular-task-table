@@ -5,17 +5,17 @@ import './TaskForm.sass'
 
 interface TaskFormProps {
   tasks?: Task[];
-  title?: string;
+  title: string;
 }
 
 const TaskForm: FC<TaskFormProps> = ({
   tasks = [],
-  title = 'untitled',
+  title,
 }): ReactElement => {
   return (
     <div className='task-form'>
       <header>
-        <h2>Form Title</h2>
+        <h2>{title}</h2>
       </header>
       <main>
         <TaskList tasks={tasks} />

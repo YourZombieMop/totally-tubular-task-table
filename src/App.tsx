@@ -15,12 +15,12 @@ const App: FC = (): ReactElement => {
       <Header title='Totally Tubular Task Table' />
       <main className='app'>
         <HorizontalScrollContainer>
-          <TaskForm tasks={taskData} />
-          <TaskForm />
-          <TaskForm tasks={taskData} />
-          <TaskForm tasks={taskData} />
-          <TaskForm tasks={taskData} />
-          <TaskForm tasks={taskData} />
+          <TaskForm title='Title Goes Here' tasks={taskData} />
+          <TaskForm title='Title' />
+          <TaskForm title='Todo Title' tasks={taskData} />
+          <TaskForm title='Title' tasks={taskData} />
+          <TaskForm title='Title' tasks={taskData} />
+          <TaskForm title='Title' tasks={taskData} />
         </HorizontalScrollContainer>
       </main>
       <Footer copyright='Matthew Boyea'/>
